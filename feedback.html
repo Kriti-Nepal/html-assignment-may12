@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+
+<body>
+
+    <h2>Feedback Form</h2>
+
+    <form>
+
+        <!-- Full Name -->
+        <label>Full Name:</label><br>
+        <input type="text"
+               name="fullname"
+               placeholder="Enter your full name"
+               required
+               minlength="3"><br><br>
+
+        <!-- Email -->
+        <label>Email Address:</label><br>
+        <input type="email"
+               name="email"
+               placeholder="Enter your email"
+               required><br><br>
+
+        <!-- Rating -->
+        <label>Rating:</label><br>
+
+        <input type="radio" name="rating">
+        Very Satisfied<br>
+
+        <input type="radio" name="rating">
+        Satisfied<br>
+
+        <input type="radio" name="rating">
+        Neutral<br>
+
+        <input type="radio" name="rating">
+        Unsatisfied<br><br>
+
+        <!-- Interests -->
+        <label>Interests:</label><br>
+
+        <input type="checkbox" name="interest">
+        Web Development<br>
+
+        <input type="checkbox" name="interest">
+        Mobile Development<br>
+
+        <input type="checkbox" name="interest">
+        AI & Machine Learning<br><br>
+
+        <!-- Country -->
+        <label>Select Country:</label><br>
+
+        <select required>
+            <option value="">Choose Country</option>
+            <option>Nepal</option>
+            <option>India</option>
+            <option>USA</option>
+        </select><br><br>
+
+        <!-- Feedback -->
+        <label>Write your feedback here:</label><br>
+
+        <textarea rows="5"
+                  cols="30"
+                  maxlength="200"
+                  placeholder="Write your feedback"></textarea><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <br>
+
+    <a href="index.html">Back to Home</a>
+
+</body>
+</html>
