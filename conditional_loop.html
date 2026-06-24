@@ -1,0 +1,269 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Assignment 4</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    margin:20px;
+    background:#f4f4f4;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.section{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+input, button{
+    padding:10px;
+    margin:5px;
+    width:100%;
+}
+
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+.output{
+    margin-top:10px;
+    padding:10px;
+    background:#eee;
+    white-space:pre-line;
+}
+
+#colorBox{
+    width:100%;
+    max-width:300px;
+    height:200px;
+    background:lightgray;
+    border:2px solid black;
+    transition:background-color 0.5s ease;
+    margin-top:10px;
+}
+
+@media (min-width:768px){
+    input{
+        width:300px;
+    }
+
+    button{
+        width:auto;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>JavaScript Assignment 4</h1>
+
+<!-- Even Odd -->
+<div class="section">
+<h2>1. Even or Odd Checker</h2>
+
+<input type="number" id="evenOddNum" placeholder="Enter a number">
+
+<button onclick="checkEvenOdd()">Check</button>
+
+<div id="evenOddResult" class="output"></div>
+</div>
+
+<!-- Multiplication Table -->
+<div class="section">
+<h2>2. Multiplication Table Generator</h2>
+
+<input type="number" id="tableNum" placeholder="Enter a number">
+
+<button onclick="generateTable()">Generate Table</button>
+
+<div id="tableResult" class="output"></div>
+</div>
+
+<!-- FizzBuzz -->
+<div class="section">
+<h2>3. FizzBuzz Challenge</h2>
+
+<button onclick="runFizzBuzz()">Run FizzBuzz</button>
+
+<div id="fizzBuzzResult" class="output"></div>
+</div>
+
+<!-- Square Pattern -->
+<div class="section">
+<h2>4. Square Pattern</h2>
+
+<input type="number" id="squareSize" placeholder="Enter size">
+
+<button onclick="squarePattern()">Generate Square</button>
+
+<div id="squareResult" class="output"></div>
+</div>
+
+<!-- Triangle Pattern -->
+<div class="section">
+<h2>5. Right-Angled Triangle</h2>
+
+<input type="number" id="triangleSize" placeholder="Enter size">
+
+<button onclick="trianglePattern()">Generate Triangle</button>
+
+<div id="triangleResult" class="output"></div>
+</div>
+
+<!-- Color Changer -->
+<div class="section">
+<h2>6. Dynamic Color Changer</h2>
+
+<input type="color" id="colorPicker">
+
+<div id="colorBox"></div>
+
+<button id="resetBtn">Reset Color</button>
+</div>
+
+</div>
+
+<script>
+
+// 1. Even Odd Checker
+function checkEvenOdd(){
+
+    let num = Number(document.getElementById("evenOddNum").value);
+
+    if(num % 2 === 0){
+        document.getElementById("evenOddResult").innerHTML =
+        num + " is an even number.";
+    }
+    else{
+        document.getElementById("evenOddResult").innerHTML =
+        num + " is an odd number.";
+    }
+}
+
+
+// 2. Multiplication Table
+function generateTable(){
+
+    let num = Number(document.getElementById("tableNum").value);
+
+    let output = "";
+
+    for(let i=1;i<=10;i++){
+        output += num + " x " + i + " = " + (num*i) + "\n";
+    }
+
+    document.getElementById("tableResult").innerHTML = output;
+}
+
+
+// 3. FizzBuzz
+function runFizzBuzz(){
+
+    let output = "";
+
+    for(let i=1;i<=20;i++){
+
+        if(i%3===0 && i%5===0){
+            output += "FizzBuzz\n";
+        }
+        else if(i%3===0){
+            output += "Fizz\n";
+        }
+        else if(i%5===0){
+            output += "Buzz\n";
+        }
+        else{
+            output += i + "\n";
+        }
+    }
+
+    document.getElementById("fizzBuzzResult").innerHTML = output;
+}
+
+
+// 4. Square Pattern
+function squarePattern(){
+
+    let n = Number(document.getElementById("squareSize").value);
+
+    let output = "";
+
+    for(let i=0;i<n;i++){
+
+        let row="";
+
+        for(let j=0;j<n;j++){
+            row += "*";
+        }
+
+        output += row + "\n";
+    }
+
+    document.getElementById("squareResult").innerHTML = output;
+}
+
+
+// 5. Triangle Pattern
+function trianglePattern(){
+
+    let n = Number(document.getElementById("triangleSize").value);
+
+    let output = "";
+
+    for(let i=1;i<=n;i++){
+
+        let row="";
+
+        for(let j=1;j<=i;j++){
+            row += "*";
+        }
+
+        output += row + "\n";
+    }
+
+    document.getElementById("triangleResult").innerHTML = output;
+}
+
+
+// 6. Color Changer
+const colorPicker = document.getElementById("colorPicker");
+const colorBox = document.getElementById("colorBox");
+const resetBtn = document.getElementById("resetBtn");
+
+colorPicker.addEventListener("input", function(){
+    colorBox.style.backgroundColor = colorPicker.value;
+});
+
+resetBtn.addEventListener("click", function(){
+    colorBox.style.backgroundColor = "lightgray";
+});
+
+</script>
+
+</body>
+</html>
+```
