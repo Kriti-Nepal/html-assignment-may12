@@ -1,0 +1,146 @@
+/* General Website Styling */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Fixed Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Heading Styles */
+h1, h2 {
+    color: #0066cc;
+}
+
+/* ID Selector */
+#main-heading {
+    color: darkred;
+    text-align: center;
+}
+
+/* Element Selector */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Class Selector */
+.intro {
+    color: darkgreen;
+    font-style: italic;
+}
+
+/* Main Content Section */
+.content {
+    position: relative;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* Absolute Positioned Box */
+.important-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: yellow;
+    border: 1px solid black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Sticky Heading */
+.sticky-heading {
+    position: sticky;
+    top: 80px;
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+/* Div Styling (Box Model) */
+.info-box {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 15px;
+    box-sizing: border-box;
+    background-color: #e8f4ff;
+}
+
+/* Span Styling */
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+/* Text Alignment */
+.center-text {
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    width: 60%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
+button,
+input[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #004d99;
+}
+
+/* Section Background */
+.section-bg {
+    background-color: #dff0d8;
+    padding: 15px;
+}
+
+/* Additional content for scrolling */
+.long-content {
+    margin-top: 20px;
+}
